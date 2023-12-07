@@ -19,7 +19,7 @@ body {
     border-radius: 0px;
 }
 
-/* ===================================================================Sartorius_Logo */
+/* =====================================================Sartorius_Logo */
 
 .sartoriusbox {
     width: 100%;
@@ -51,8 +51,26 @@ body {
     }
 }
 
+.specialistbox {
+    position: absolute;
+    width: 80px;
+    right: 10px;
+    bottom: 10px;
+    height: 25px;
+}
 
-/* ====================================================================Form Filter */
+.specialist {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 11px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    line-height: 25px;
+}
+
+/* ========================================================Form Filter */
 
 .filter {
     margin-top: 10px;
@@ -95,21 +113,22 @@ body {
     cursor: pointer;
 }
 
-/* ========================================================================countResults */
+/* ==========================================================countResults */
 
 .countResults{
     width: 100%;
-    height: 60px;
+    height: 45px;
     background-color: #FFF100;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+    font-size: 25px;
     text-align: center;
-    padding: 10px;
+    line-height: 45px;
+    padding: 0;
     margin-top: 20px;
     margin-bottom: 50px;
 }
 
-/* ===============================================================================List */
+/* ================================================================List */
 
 #list {
     padding: 10px;
@@ -160,7 +179,7 @@ body {
 
 }
 
-/* ===============================================================================footer */
+/* ===============================================================footer */
 
 .footer {
     position: relative;
@@ -185,19 +204,22 @@ body {
 
 
 
-/* ========================================================================== MODAL Window */
+/* ======================================================== MODAL Window */
 
 input[id*="popup"] {
     display: none;
 }
 
+/* Modal_Label_01 */
 input[id*="popup"] + label {
     display: inline-block;
-    padding: 20px;
-    background-color: #FFF100;
-    color: black;
+    padding: 0px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
 }
 
+/* 모달창 위치를 설정하기 위해 아래와 같이 position을 설정해 준다 */
 input[id*="popup"] + label + div {
     position: fixed;
     top: 0;
@@ -207,17 +229,20 @@ input[id*="popup"] + label + div {
     z-index: 100;
 }
 
+
 input[id*="popup"] + label + div > div {
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 95%;
-    height: 80%;
+    height: 90%;
     background-color: #FFF100;
+    color: black;
     z-index: 2;
 }
 
+/* Modal_Label_02 */
 input[id*="popup"] + label + div > div > label {
     position: absolute;
     top: 0%;
@@ -227,9 +252,11 @@ input[id*="popup"] + label + div > div > label {
     background-color: black;
     border-radius: 100%;
     z-index: 1;
+    cursor: pointer;
 }
 
 /* 부모 요소 자식 요소가 아니고 같은 동등 위치 인접요소는 +로 선택 */
+/* Modal_Label_03 */
 input[id*="popup"] + label + div > label {
     position: absolute;
     top: 0;
@@ -238,6 +265,7 @@ input[id*="popup"] + label + div > label {
     height: 100%;
     background-color: rgba(0,0,0,.7);
     z-index: 1;
+    cursor: pointer;
 }
 
 /* 모달윈도우 action : Animation*/
@@ -252,3 +280,52 @@ input[id*="popup"]:checked + label + div {
     opacity: 1;
     visibility: visible;
 }
+
+/* 모달윈도우 내용 */
+.modalcontent {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.modalcontent .intro {
+    width: 95%;
+    height: 50px;
+    margin: 30px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.modalcontent .incharge {
+    position: relative;
+    border: 1px solid orange;
+    width: 95%;
+    height: 180px;
+    margin : 20px auto;
+    /* background-color: black; */
+}
+
+.modalcontent .incharge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.modalcontent .incharge div {
+    position: absolute;
+    /* border: 1px solid #404040; */
+    text-align: left;
+    top: 35px;
+    left: 30px;
+    
+}
+
+.modalcontent .incharge ul {
+    font-size: 14px;
+    list-style: none;
+}
+
+
+
