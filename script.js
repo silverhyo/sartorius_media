@@ -1,79 +1,125 @@
-let list = document.getElementById('list');  // list 변수 생성 > HTML에서 id=list를 대입한다. 
-let filter = document.querySelector('.filter');  // class=filter 선택 대입
-let count = document.querySelector('#count'); // getElementById('count') 로 사용해도 된다. 차이는?
-let listProducts = [  // listProduct 변수 생성 > 안에 정보 있는 array를 생성
+let list = document.getElementById('list'); 
+let filter = document.querySelector('.filter');
+let count = document.querySelector('#count');
+let listProducts = [
     {
         id: 1,
-        name: 'Name product white-black',
+        name: 'Xell CAP_CDM_Feed',
         price: 100,
-        quantity: 0,
-        image: 'Xell CAP_CDM_Feed Liquid.jpg',
+        brand: 'Xell',
+        image: 'image/Xell CAP_CDM_Feed Liquid.jpg',
         nature: {
-            color: ['white', 'black'],
-            size: ['S', 'M', 'L'],
-            type: 'T-shirt'
+            cellline: ['CHO', 'HEK'],
+            manufacturer: 'Sigma',
+            application: 'CGT',
+            mediatype: ['Liquid', 'Powder']  // HTML <option value="">에서 따옴표 사이와 여기 배열안의 단어가 똑같아야 함!!
         }
     },
     {
         id: 2,
-        name: 'Name product white-black-grey',
+        name: 'Xell CHO_TF',
         price: 100,
-        quantity: 30,
-        image: 'Xell CHO_TF Liquid.jpg',
+        brand: 'Xell',
+        image: 'image/Xell CHO_TF Liquid.jpg',
         nature: {
-            color: ['white', 'black', 'grey'],
-            size: ['S', 'M', 'L'],
-            type: 'Polo'
+            cellline: ['HEK', 'VERO'],
+            manufacturer: 'Sartorius',
+            application: 'Vaccine',
+            mediatype: ['Powder']
         }
     },
     {
         id: 3,
-        name: 'Name product black',
+        name: 'Xell CHOlean',
         price: 100,
-        quantity: 20,
-        image: 'Xell CHOlean Liquid.jpg',
+        brand: 'Xell',
+        image: 'image/Xell CHOlean Liquid.jpg',
         nature: {
-            color: ['black'],
-            size: ['S', 'M', 'L'],
-            type: 'Polo'
+            cellline: ['CHO'],
+            manufacturer: 'Sartorius',
+            application: 'Vaccine',
+            mediatype: ['Powder']
         }
     },
     {
         id: 4,
-        name: 'Name product blue-black',
+        name: 'Xell HEK_FS',
         price: 100,
-        quantity: 20,
-        image: 'Xell HEK_FS Liquid.jpg',
+        brand: 'Xell',
+        image: 'image/Xell HEK_FS Liquid.jpg',
         nature: {
-            color: ['blue', 'black'],
-            size: ['S', 'M', 'L'],
-            type: 'T-shirt'
+            cellline: ['HEK'],
+            manufacturer: 'Merck',
+            application: 'CGT',
+            mediatype: ['Liquid']
         }
     },
     {
         id: 5,
-        name: 'Name product brown',
+        name: 'Xell HEK_GM',
         price: 100,
-        quantity: 10,
-        image: 'Xell HEK_GM Liquid.jpg',
+        brand: 'Xell',
+        image: 'image/Xell HEK_GM Liquid.jpg',
         nature: {
-            color: ['brown'],
-            size: ['S', 'M', 'L'],
-            type: 'Polo'
+            cellline: ['VERO'],
+            manufacturer: 'Merck',
+            application: 'Vaccine',
+            mediatype: ['Liquid']
         }
     },
     {
         id: 6,
-        name: 'Name product white-black-grey',
+        name: 'Xell HEK_TF_for_SILAC',
         price: 200,
-        quantity: 10,
-        image: 'Xell HEK_TF_for_SILAC Liquid.jpg',
+        brand: 'Xell',
+        image: 'image/Xell HEK_TF_for_SILAC Liquid.jpg',
         nature: {
-            color: ['white', 'black', 'grey'],
-            size: ['S', 'M', 'L'],
-            type: 'Shirt'
+            cellline: ['CHO', 'HEK', 'VERO'],
+            manufacturer: 'Sigma',
+            application: 'mAb',
+            mediatype: ['Liquid', 'Powder']
         }
     },
+    {
+        id: 7,
+        name: 'Xell HEK_ViP_NB',
+        price: 200,
+        brand: 'Xell',
+        image: 'image/Xell HEK_ViP_NB Liquid.jpg',
+        nature: {
+            cellline: ['CHO', 'HEK', 'VERO'],
+            manufacturer: 'Sigma',
+            application: 'mAb',
+            mediatype: ['Liquid', 'Powder']
+        }
+    },
+    {
+        id: 8,
+        name: 'Xell HYB_FS',
+        price: 200,
+        brand: 'Xell',
+        image: 'image/Xell HYB_FS Liquid.jpg',
+        nature: {
+            cellline: ['CHO', 'HEK', 'VERO'],
+            manufacturer: 'Sigma',
+            application: 'mAb',
+            mediatype: ['Liquid', 'Powder']
+        }
+    },
+    {
+        id: 9,
+        name: 'Xell MDXK',
+        price: 200,
+        brand: 'Xell',
+        image: 'image/Xell MDXK Liquid.jpg',
+        nature: {
+            cellline: ['CHO', 'HEK', 'VERO'],
+            manufacturer: 'Sartorius',
+            application: 'Vaccine',
+            mediatype: ['Liquid', 'Powder']
+        }
+    },
+    
             
 ];
 
@@ -98,11 +144,11 @@ function showProduct(productFilter){                    // showProduct 함수 �
         newTitle.innerText = item.name;                 // <div class="title">item.name</div>
         newItem.appendChild(newTitle);                  // <div class="item"> 의 자식요소로 넣어라
         
-        //create price
-        let newPrice = document.createElement('div');   // <div></div>
-        newPrice.classList.add('price');                // <div class="price"></div>
-        newPrice.innerText = item.price;                // <div class="price">item.price</div>
-        newItem.appendChild(newPrice);                 // appendChild()메소드 : 새로운 노드를 해당 노드의 child node list의 맨 마지막에 추가
+        //create brand
+        let newBrand = document.createElement('div');   // <div></div>
+        newBrand.classList.add('brand');                // <div class="price"></div>
+        newBrand.innerText = item.brand;                // <div class="price">item.price</div>
+        newItem.appendChild(newBrand);                 // appendChild()메소드 : 새로운 노드를 해당 노드의 child node list의 맨 마지막에 추가
 
         list.appendChild(newItem);                      // <div class="item"></div>요소를 <div class="list"></div>사이에 넣어라!
     });
@@ -129,18 +175,33 @@ filter.addEventListener('submit', function(event){
     let valueFilter = event.target.elements;
     productFilter = listProducts.filter(item => {
         
-        // check category
-        if(valueFilter.category.value != ''){
-            if(item.nature.type != valueFilter.category.value){
+        // check application
+        if(valueFilter.application.value != ''){
+            if(item.nature.application != valueFilter.application.value){ // item앞에 !가 없잖아 그래서 아래 것들과는 다른데 딱 한가지 중복 없어야 하는 경우 이걸 쓴 것 같다.
                 return false;
             }
         }
-        // check color
-        if(valueFilter.color.value != ''){
-            if(!item.nature.color.includes(valueFilter.color.value)){   //느낌표(!)를 제거하고 실행 > color에 white를 선택했을 경우 white가 포함되지 않은 것을 보요주네
+        // check cell line
+        if(valueFilter.cellline.value != ''){
+            if(!item.nature.cellline.includes(valueFilter.cellline.value)){
                 return false;
             }
         }
+
+        // check manufacturer
+        if(valueFilter.manufacturer.value != ''){
+            if(!item.nature.manufacturer.includes(valueFilter.manufacturer.value)){
+                return false;
+            }
+        }
+
+        // check media type
+        if(valueFilter.mediatype.value != ''){
+            if(!item.nature.mediatype.includes(valueFilter.mediatype.value)){
+                return false;
+            }
+        }
+
         // check name
         if(valueFilter.name.value != ''){
             if(!item.name.includes(valueFilter.name.value)){

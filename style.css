@@ -5,24 +5,60 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 50vh;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    background-image: linear-gradient(to bottom right, #4f4b50, #f0efe5);
+    /* background-image: linear-gradient(to bottom right, #4f4b50, #f0efe5); */
 }
 
 .container {
-    background-color: #fff100;
+    /* background-color: #fff100; */
     width: 1000px;
     max-width: 100%;
-    margin: 50px auto 0;
-    border-radius: 10px;
+    margin: 0 auto 0;
+    border-radius: 0px;
 }
 
+/* ===================================================================Sartorius_Logo */
+
+.sartoriusbox {
+    width: 100%;
+    height: 60px;
+    background-color: #FFF100;
+    position: relative;
+    display: flex;
+}
+
+.sartorius_logo {
+    width: 130px;
+    position: absolute;
+    left: 20px;
+    top: 30%;
+    animation-duration: 3s;
+    animation-name: slidein_logo;
+}
+
+@keyframes slidein_logo {
+    from {
+        margin-left: 100px;
+        width: 130px;
+    }
+
+    to {
+        /* .sartorius_logo에서 image의 위치는 left와 top으로 정해졌지만 animation에서의 위치는 다르다 */
+        margin-left: 0px;  
+        width: 130px;
+    }
+}
+
+
+/* ====================================================================Form Filter */
+
 .filter {
-    padding: 20px;
+    margin-top: 10px;
+    padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     column-gap: 1%;
     row-gap: 10px
@@ -39,7 +75,7 @@ body {
 .filter .item input,
 .filter .item button {
     width: 100%;
-    padding:5px;
+    padding: 5px;
     border: none;
     background-color: transparent;
     border-left: 1px solid #ddd;
@@ -48,51 +84,171 @@ body {
 
 .filter .item label {
     display: block;
-    width: 40%;
-    padding: 0 10px;
+    width: 75%;
+    padding: 0 5px;
+    font-size: 12px;
 }
 
 .filter .item button {
-    background-color: #AA82ED;
-    color: #FFF;
+    background-color: #FFF100;
+    color: black;
+    cursor: pointer;
 }
+
+/* ========================================================================countResults */
 
 .countResults{
+    width: 100%;
+    height: 60px;
+    background-color: #FFF100;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
+/* ===============================================================================List */
+
 #list {
-    padding: 20px;
+    padding: 10px;
     display: grid;
     column-gap: 1%;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 10px;
+    row-gap: 5px;
     text-align: center;
 }
 
 #list .item img {
-    width: 90%;
-    height: 200px;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-    margin: 20px 0;
+    margin: 5px 0;
     border-radius: 0px;
+    cursor: pointer;
+    animation-duration: 1s;
+    animation-name: fadeinout;
+}
+
+@keyframes fadeinout {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 #list .item {
-    background-color: #fff5;
+    background-color: #FFF100;
     text-align: center;
     border-radius: 0;
 }
 
 #list .item .title {
+    font-size: 12px;
     font-weight: bold;
 }
 
-#list .item .price {
+#list .item .brand {
     color: black;
+    font-size: 11px;
     letter-spacing: 1px;
     padding: 10px;
 
+}
+
+/* ===============================================================================footer */
+
+.footer {
+    position: relative;
+}
+
+.sartoriusend {
+    position: absolute;
+    /* Bottom을 0으로 할 경우 list 부분의 내용이 잘릴 수 있다. 이 떄 scroll을 써보면 어떨까? */
+    /* bottom: 0; */ 
+    width: 100%;
+    height: 200px;
+    margin-top: 70px;
+    background-color: #404040;
+}
+
+.footer .sartoriusend img {
+    position: absolute;
+    width: 130px;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+
+/* ========================================================================== MODAL Window */
+
+input[id*="popup"] {
+    display: none;
+}
+
+input[id*="popup"] + label {
+    display: inline-block;
+    padding: 20px;
+    background-color: #FFF100;
+    color: black;
+}
+
+input[id*="popup"] + label + div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+input[id*="popup"] + label + div > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 95%;
+    height: 80%;
+    background-color: #FFF100;
+    z-index: 2;
+}
+
+input[id*="popup"] + label + div > div > label {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(40%, -40%);
+    padding: 20px;
+    background-color: black;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+/* 부모 요소 자식 요소가 아니고 같은 동등 위치 인접요소는 +로 선택 */
+input[id*="popup"] + label + div > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1;
+}
+
+/* 모달윈도우 action : Animation*/
+
+input[id*="popup"] + label + div {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+input[id*="popup"]:checked + label + div {
+    opacity: 1;
+    visibility: visible;
 }

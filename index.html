@@ -3,44 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sartorius_Media</title>
+    <title>Document</title>
 
 
 <!-- Stylesheet 링크 -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- <script src="script.js"></script> -->
 
 </head>
 
 <body>
     <div class="container">
+         <!-- Sartorius Logo 입니다. -->
+         <div class="sartoriusbox">
+
+            <div class="sartorius_logo">
+                <a href="index.html">
+                    <img src="image/sartorius-logo-black.png" width="100%" class="imagelogo">
+                </a>
+            </div>
+            
+        </div>
+
+                
+        <!-- Filter -->
         <form class="filter">
             <div class="item">
-                <label for="">Category</label>
-                <select name="category">
+                <label for="">Aplication</label>
+                <select name="application">
                     <option value="">---</option>
-                    <option value="T-shirt">T-shirt</option>
-                    <option value="Shirt">Shirt</option>
-                    <option value="Polo">Polo</option>
+                    <option value="mAb">mAb</option>
+                    <option value="Vaccine">Vaccine</option>
+                    <option value="CGT">CGT</option>
                 </select>
             </div>
 
             <div class="item">
-                <label for="">Color</label>
-                <select name="color">
+                <label for="">Cell Line</label>
+                <select name="cellline">
                     <option value="">---</option>
-                    <option value="white">white</option>
-                    <option value="black">black</option>
-                    <option value="grey">grey</option>
-                    <option value="blue">blue</option>
-                    <option value="brown">brown</option>
+                    <option value="CHO">CHO</option>
+                    <option value="HEK">HEK</option>
+                    <option value="VERO">VERO</option>
                 </select>
             </div>
 
             <div class="item">
-                <label for="">Name</label>
-                <input type="text" name="name">
+                <label for="">Manufacturer</label>
+                <select name="manufacturer">
+                    <option value="">---</option>
+                    <option value="Sartorius">Sartorius</option>
+                    <option value="Merck">Merck</option>
+                    <option value="Sigma">Sigma</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <label for="">Media Type</label>
+                <select name="mediatype">
+                    <option value="">---</option>
+                    <option value="Liquid">Liquid</option>
+                    <option value="Powder">Powder</option>
+                </select>
             </div>
 
             <div class="item">
@@ -53,6 +77,11 @@
                 <input type="number" name="maxPrice">
             </div>
 
+            <div class="item">
+                <label for="">Name</label>
+                <input type="text" name="name">
+            </div>
+
             <div class="item submit">
                 <button>Search</button>
             </div>
@@ -62,46 +91,67 @@
 
 
         <div class="countResults">
-            Found <b id="count"></b> results.
+            - Found <b id="count"></b> results -
         </div>
 
         <div id="list">
             <!-- <div class="item">
                 <img src="capcdmfeed.jpg">
                 <div class="title">Name Product</div>
-                <div class="price">100</div>
+                <div class="brand">100</div>
             </div>
 
             <div class="item">
                 <img src="HYB_FS.jpg">
                 <div class="title">Name Product</div>
-                <div class="price">100</div>
+                <div class="brand">100</div>
             </div>
 
             <div class="item">
                 <img src="MDXK Medium.jpg">
                 <div class="title">Name Product</div>
-                <div class="price">100</div>
+                <div class="brand">100</div>
             </div>
 
             <div class="item">
                 <img src="CHO_TF.jpg">
                 <div class="title">Name Product</div>
-                <div class="price">100</div>
+                <div class="brand">100</div>
             </div>
 
             <div class="item">
                 <img src="CHOlean Medium.jpg">
                 <div class="title">Name Product</div>
-                <div class="price">100</div>
+                <div class="brand">100</div>
             </div>
 
             <div class="item">
                 <img src="HEK ViP NB Medium.jpg">
                 <div class="title">Name Product</div>
-                <div class="price">100</div>
+                <div class="brand">100</div>
             </div> -->
 
+        </div>
+
+        <!-- Modal Window -->
+        <input type="checkbox" id="popup">
+        <label for="popup">View</label>
+
+        <div>
+            <div>
+                <label for="popup"></label>
+                <div>
+                    dkafksjdflkasjflkasj;l
+                </div>
+            </div>
+            <label for="popup"></label>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="sartoriusend">
+            <img src="image/sartorius-logo-white.png">
+            </div>
         </div>
 
 
