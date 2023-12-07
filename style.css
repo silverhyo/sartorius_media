@@ -291,7 +291,7 @@ input[id*="popup"]:checked + label + div {
 .modalcontent .intro {
     width: 95%;
     height: 50px;
-    margin: 30px auto;
+    margin: 30px auto 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     font-weight: 600;
@@ -301,8 +301,8 @@ input[id*="popup"]:checked + label + div {
     position: relative;
     border: 1px solid orange;
     width: 95%;
-    height: 180px;
-    margin : 20px auto;
+    height: 170px;
+    margin : 10px auto;
     /* background-color: black; */
 }
 
