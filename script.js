@@ -261,7 +261,15 @@ listItem.forEach(item => {
 
 });
 
+let closeButton = document.querySelectorAll('.closebutton');
 
+closeButton.forEach(closebutton => {
+    closebutton.onclick = () => {
+        popupContainer.style.display = 'none'
+        document.querySelectorAll('.previewbox.active').classList.remove('active')
+    }
+
+});
 
 
         // silverhyo

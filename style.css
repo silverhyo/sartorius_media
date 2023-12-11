@@ -349,14 +349,25 @@ input[id*="popup"]:checked + label + div {
 }
 
 .preview_container .previewbox {
-    width: 90%;
-    height: 800px;
+    width: 85%;
+    height: 700px;
     display: none;
     padding: 10px;
     text-align: center;
     background-color: white;
     /* position: relative; */
-    
+    animation-duration: 2s;
+    animation-name: fadeinout01;
+}
+
+@keyframes fadeinout01 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -369,12 +380,28 @@ input[id*="popup"]:checked + label + div {
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+}
 
+.closebutton {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    line-height: 40px;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 50%;
+    cursor: pointer;
 }
 
 .preview_container .previewbox .preview img {
     width: 100%;
-    height: 500px;
+    height: 450px;
     object-fit: cover;
     transform: scale(1.2);
 }
@@ -393,5 +420,6 @@ input[id*="popup"]:checked + label + div {
 .description ul li {
     font-size: 13px;
     text-align: left;
+    list-style: none;
 }
 
