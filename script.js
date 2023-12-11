@@ -244,8 +244,9 @@ filter.addEventListener('submit', function(event){
 
 let popupContainer = document.querySelector('.preview_container');
 let previewBox = document.querySelectorAll('.previewbox');  // All 선택하지 않으면 체일 처음 나오는 previewbox 하나만 선택됨
-let listItem = document.querySelectorAll('#list .item');
 
+
+let listItem = document.querySelectorAll('#list .item');
 listItem.forEach(item => {
     item.onclick=() => {
         popupContainer.style.display = 'flex'
@@ -262,12 +263,16 @@ listItem.forEach(item => {
 });
 
 let closeButton = document.querySelectorAll('.closebutton');
-
 closeButton.forEach(closebutton => {
     closebutton.onclick = () => {
         popupContainer.style.display = 'none'
-        document.querySelectorAll('.previewbox.active').classList.remove('active')
-    }
+
+        let previewBoxActive = document.querySelector('.previewbox.active');
+        previewBox.forEach(previewbox => {
+            document.querySelector('.previewbox.active').classList.remove("active");
+        });
+        
+    };
 
 });
 

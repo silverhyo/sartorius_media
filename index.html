@@ -3,327 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome to Media World!</title>
 
 
-<!-- Stylesheet 링크 -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            max-width: 1000px;
+            height: 100vh;
+            background-color: #1a1a1a;
+        }
 
-  
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .container .welcome {
+            width: 60%;
+            margin: 0 auto;
+            position: absolute;
+            top: 200px;
+            left: 20%;
+        }
+
+        .container .welcome img {
+            width: 100%;
+            animation-duration: 5s;
+            animation-name: fadeinout;
+        }
+
+        .text {
+            position: absolute;
+            top: 350px;
+            left: 13%;
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+            animation-duration: 5s;
+            animation-name: fadeinout;
+        }
+
+        @keyframes fadeinout {
+            from {
+        opacity: 0;
+            }
+
+            to {
+        opacity: 1;
+            }
+        }
+
+    </style>
+
 </head>
-
 <body>
+    <a href="media.html">
     <div class="container">
-         <!-- ======================================Sartorius Logo 입니다. -->
-         <div class="sartoriusbox">
-
-            <div class="sartorius_logo">
-                <a href="index.html">
-                    <img src="image/sartorius-logo-black.png" width="100%" class="imagelogo">
-                </a>
-            </div>
+        <div class="welcome">
             
-            <div class="specialistbox">
-
-                <div class="specialist">
-                    <input type="checkbox" id="popup">
-                    <label for="popup">SPECIALIST</label>
-
-                    <div>
-                        <div>
-                            <label for="popup"></label>
-                            <div class="modalcontent">
-                                
-                                <div class="intro">
-                                    Application Specialists
-                                </div>
-
-                                <div class="incharge">
-                                    <img src="image02/p_01.jpg">
-                                    <div>
-                                        <ul>
-                                            <li><strong>April.Kim</strong></li><br>
-                                            <li>april.kim@sartorius.co.kr</li>
-                                            <li>010-0000-0000</li>
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="incharge">
-                                    <img src="image02/p_02.jpg">
-                                    <div>
-                                        <ul>
-                                            <li><strong>Doojae.Jang</strong></li><br>
-                                            <li>doojae.jang@sartorius.co.kr</li>
-                                            <li>010-0000-0000</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                
-                                <div class="incharge">
-                                    <img src="image02/p_03.jpg">
-                                    <div>
-                                        <ul>
-                                            <li><strong>April.Kim</strong></li><br>
-                                            <li>april.kim@sartorius.co.kr</li>
-                                            <li>010-0000-0000</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <label for="popup"></label>
-                    </div>
-                </div>
-                
-        
-            </div>
+            <img src="image/sartorius-logo-white.png" alt="">
             
         </div>
 
-         <!-- ==============================================Modal Window -->
-        
- 
-
-        <!-- =======================================================POPUP -->
-        
-       
-          
-
-                
-        <!-- =====================================================Filter -->
-        <form class="filter">
-            <div class="item">
-                <label for="">Aplication</label>
-                <select name="application">
-                    <option value="">---</option>
-                    <option value="mAb">mAb</option>
-                    <option value="Vaccine">Vaccine</option>
-                    <option value="CGT">CGT</option>
-                </select>
-            </div>
-
-            <div class="item">
-                <label for="">Cell Line</label>
-                <select name="cellline">
-                    <option value="">---</option>
-                    <option value="CHO">CHO</option>
-                    <option value="HEK">HEK</option>
-                    <option value="VERO">VERO</option>
-                </select>
-            </div>
-
-            <div class="item">
-                <label for="">Manufacturer</label>
-                <select name="manufacturer">
-                    <option value="">---</option>
-                    <option value="Sartorius">Sartorius</option>
-                    <option value="Merck">Merck</option>
-                    <option value="Sigma">Sigma</option>
-                </select>
-            </div>
-
-            <div class="item">
-                <label for="">Media Type</label>
-                <select name="mediatype">
-                    <option value="">---</option>
-                    <option value="Liquid">Liquid</option>
-                    <option value="Powder">Powder</option>
-                </select>
-            </div>
-
-            <div class="item">
-                <label for="">Min Price</label>
-                <input type="number" name="minPrice">
-            </div>
-
-            <div class="item">
-                <label for="">Max Price</label>
-                <input type="number" name="maxPrice">
-            </div>
-
-            <div class="item">
-                <label for="">Name</label>
-                <input type="text" name="name">
-            </div>
-
-            <div class="item submit">
-                <button>Search</button>
-            </div>
-
-        </form>
-
-
-        <!-- =============================================CoundResults -->
-        <div class="countResults">
-            - Found <b id="count"></b> results -
+        <div class="text">
+            Welcom to Media World!
         </div>
-
-
-        <!-- ======================================================list -->
-        <div id="list">
-            <div class="item">
-                <img src="#.jpg">
-                <div class="title">Name Product</div>
-                <div class="brand"></div>
-            </div>
-        </div>
-
-       
-        <!-- ==================================================Footer -->
-        <div class="footer">
-            <div class="sartoriusend">
-            <img src="image/sartorius-logo-white.png">
-            </div>
-        </div>
-
     </div>
-
-    <!-- ===================================================POPUP_WINDOW -->
-    
-    <div class="preview_container">
-        
-        <div class="previewbox" data-target="p_01">
-            <div class="preview">
-                <img src="image/Xell CAP_CDM_Feed Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell CAP_CDM_Feed</h3>
-            <div class="description">
-                <ul>
-                    <li>좋은 배지 입니다</li>
-                    <li>정말좋은배지입니다.</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_02">
-            <div class="preview">
-                <img src="image/Xell CHO_TF Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell CHO_TF</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_03">
-            <div class="preview">
-                <img src="image/Xell CHOlean Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell CHOlean</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_04">
-            <div class="preview">
-                <img src="image/Xell HEK_GM Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_GM</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_05">
-            <div class="preview">
-                <img src="image/Xell HEK_GM Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_GM</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_06">
-            <div class="preview">
-                <img src="image/Xell HEK_TF_for_SILAC Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_TF_for_SILAC</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_07">
-            <div class="preview">
-                <img src="image/Xell HEK_ViP_NB Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_ViP_NB</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_08">
-            <div class="preview">
-                <img src="image/Xell HYB_FS Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HYB_FS</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_09">
-            <div class="preview">
-                <img src="image/Xell MDXK Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell MDXK</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-    </div>
-
-    
-    <script src="script.js"></script>
+    </a>
 </body>
 </html>

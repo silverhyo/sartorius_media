@@ -17,6 +17,8 @@ body {
     max-width: 100%;
     margin: 0 auto 0;
     border-radius: 0px;
+    animation-duration: 1s;
+    animation-name: fadeinout;
 }
 
 /* =====================================================Sartorius_Logo */
@@ -141,7 +143,7 @@ body {
 
 #list .item img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
     margin: 5px 0;
     border-radius: 0px;
