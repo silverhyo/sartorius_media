@@ -5,6 +5,7 @@ let listProducts = [
     {
         id: 1,
         name: 'Xell CAP_CDM_Feed',
+        dataname: 'p_01',
         price: 100,
         brand: 'Xell',
         image: 'image/Xell CAP_CDM_Feed Liquid.jpg',
@@ -12,12 +13,14 @@ let listProducts = [
             cellline: ['CHO', 'HEK'],
             manufacturer: 'Sigma',
             application: 'CGT',
-            mediatype: ['Liquid', 'Powder']  // HTML <option value="">에서 따옴표 사이와 여기 배열안의 단어가 똑같아야 함!!
+            mediatype: ['Liquid', 'Powder'],  // HTML <option value="">에서 따옴표 사이와 여기 배열안의 단어가 똑같아야 함!!
+            description01 : '정말좋은배지입니다.'
         }
     },
     {
         id: 2,
         name: 'Xell CHO_TF',
+        dataname: 'p_02',
         price: 100,
         brand: 'Xell',
         image: 'image/Xell CHO_TF Liquid.jpg',
@@ -31,6 +34,7 @@ let listProducts = [
     {
         id: 3,
         name: 'Xell CHOlean',
+        dataname: 'p_03',
         price: 100,
         brand: 'Xell',
         image: 'image/Xell CHOlean Liquid.jpg',
@@ -44,6 +48,7 @@ let listProducts = [
     {
         id: 4,
         name: 'Xell HEK_FS',
+        dataname: 'p_04',
         price: 100,
         brand: 'Xell',
         image: 'image/Xell HEK_FS Liquid.jpg',
@@ -57,6 +62,7 @@ let listProducts = [
     {
         id: 5,
         name: 'Xell HEK_GM',
+        dataname: 'p_05',
         price: 100,
         brand: 'Xell',
         image: 'image/Xell HEK_GM Liquid.jpg',
@@ -70,6 +76,7 @@ let listProducts = [
     {
         id: 6,
         name: 'Xell HEK_TF_for_SILAC',
+        dataname: 'p_06',
         price: 200,
         brand: 'Xell',
         image: 'image/Xell HEK_TF_for_SILAC Liquid.jpg',
@@ -83,6 +90,7 @@ let listProducts = [
     {
         id: 7,
         name: 'Xell HEK_ViP_NB',
+        dataname: 'p_07',
         price: 200,
         brand: 'Xell',
         image: 'image/Xell HEK_ViP_NB Liquid.jpg',
@@ -96,6 +104,7 @@ let listProducts = [
     {
         id: 8,
         name: 'Xell HYB_FS',
+        dataname: 'p_08',
         price: 200,
         brand: 'Xell',
         image: 'image/Xell HYB_FS Liquid.jpg',
@@ -109,6 +118,7 @@ let listProducts = [
     {
         id: 9,
         name: 'Xell MDXK',
+        dataname: 'p_09',
         price: 200,
         brand: 'Xell',
         image: 'image/Xell MDXK Liquid.jpg',
@@ -123,6 +133,10 @@ let listProducts = [
             
 ];
 
+
+
+
+
 let productFilter = listProducts;                       // productFilter 변수 생성 > listProducts (정보 담긴 array) 변수를 대입 
 showProduct(productFilter);                             // showProduct함수에 productFilter 변수를 파라매터로 입력
 function showProduct(productFilter){                    // showProduct 함수 정의
@@ -131,8 +145,13 @@ function showProduct(productFilter){                    // showProduct 함수 �
     productFilter.forEach(item => {                     // 역서 의미하는 item은 무엇? array에 있는 각각의 항목을 의미? forEach는 각 항목에 대해 똑같이 반복하는 반복문 중의 하나.
         
         let newItem = document.createElement('div');    //  
-        newItem.classList.add('item');                  // <div class="item"></div>
+        newItem.classList.add('item');
+        
+        // silverhyo div 내에 data-name=''을 삽입
+        let newData = newItem;
+        newData.dataset.name = item.dataname;
 
+        
         // create image
         let newImage = new Image();
         newImage.src = item.image;                      // <img src="item.image">
@@ -143,31 +162,28 @@ function showProduct(productFilter){                    // showProduct 함수 �
         newTitle.classList.add('title');                // <div class="title"></div>
         newTitle.innerText = item.name;                 // <div class="title">item.name</div>
         newItem.appendChild(newTitle);                  // <div class="item"> 의 자식요소로 넣어라
-        
+
+                        
         //create brand
         let newBrand = document.createElement('div');   // <div></div>
         newBrand.classList.add('brand');                // <div class="price"></div>
         newBrand.innerText = item.brand;                // <div class="price">item.price</div>
         newItem.appendChild(newBrand);                 // appendChild()메소드 : 새로운 노드를 해당 노드의 child node list의 맨 마지막에 추가
 
-        list.appendChild(newItem);                      // <div class="item"></div>요소를 <div class="list"></div>사이에 넣어라!
+        
+        
+
+
+
+
+        list.appendChild(newItem);                    // <div class="item"></div>요소를 <div class="list"></div>사이에 넣어라!
+   
+
+        
+
+
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 filter.addEventListener('submit', function(event){
@@ -224,3 +240,81 @@ filter.addEventListener('submit', function(event){
     })
     showProduct(productFilter);
 })
+
+
+let popupContainer = document.querySelector('.preview_container');
+let previewBox = document.querySelectorAll('.previewbox');  // All 선택하지 않으면 체일 처음 나오는 previewbox 하나만 선택됨
+let listItem = document.querySelectorAll('#list .item');
+
+listItem.forEach(item => {
+    item.onclick=() => {
+        popupContainer.style.display = 'flex'
+        let name = item.getAttribute('data-name');
+        previewBox.forEach(previewBox => {
+            let target = previewBox.getAttribute('data-target');
+            if(name == target) {
+                previewBox.classList.add('active');
+            }
+
+        });
+    };
+
+});
+
+
+
+
+        // silverhyo
+        // let newPart = document.createElement('div');
+        // newPart.classList.add('popupimagebox');
+
+        // silverhyo
+        // let newTag01 = document.createElement('div');
+        // newTag01.classList.add('preview');
+                
+
+        // let newImage01 = new Image();
+        // newImage01.src = item.image;
+        // newTag01.appendChild(newImage01);
+        
+        
+        
+        // let newTag02 = document.createElement('h3')
+
+        // h3name.innerText = item.name;
+        
+        
+        
+        
+        
+        
+
+        // silverhyo
+        // let newImage01 = new Image();
+        // newImage01.src = item.image;
+
+             // silverhyo
+        // previewBox.appendChild(newTag01);
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
