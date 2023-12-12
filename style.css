@@ -351,8 +351,8 @@ input[id*="popup"]:checked + label + div {
 }
 
 .preview_container .previewbox {
-    width: 85%;
-    height: 700px;
+    width: 370px;
+    height: 680px;
     display: none;
     padding: 10px;
     text-align: center;

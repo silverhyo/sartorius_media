@@ -7,13 +7,13 @@ let listProducts = [
         name: 'Xell CAP_CDM_Feed',
         dataname: 'p_01',
         price: 100,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell CAP_CDM_Feed Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['CGT'],
             cellline: ['CHO', 'HEK'],
-            manufacturer: 'Sigma',
-            application: 'CGT',
-            mediatype: ['Liquid', 'Powder'],  // HTML <option value="">에서 따옴표 사이와 여기 배열안의 단어가 똑같아야 함!!
+            mediatype: ['Liquid'],  // HTML <option value="">에서 따옴표 사이와 여기 배열안의 단어가 똑같아야 함!!
             description01 : '정말좋은배지입니다.'
         }
     },
@@ -22,13 +22,13 @@ let listProducts = [
         name: 'Xell CHO_TF',
         dataname: 'p_02',
         price: 100,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell CHO_TF Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['Vaccine'],
             cellline: ['HEK', 'VERO'],
-            manufacturer: 'Sartorius',
-            application: 'Vaccine',
-            mediatype: ['Powder']
+            mediatype: ['Liquid']
         }
     },
     {
@@ -36,13 +36,13 @@ let listProducts = [
         name: 'Xell CHOlean',
         dataname: 'p_03',
         price: 100,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell CHOlean Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['Vaccine'],
             cellline: ['CHO'],
-            manufacturer: 'Sartorius',
-            application: 'Vaccine',
-            mediatype: ['Powder']
+            mediatype: ['Liquid']
         }
     },
     {
@@ -50,12 +50,12 @@ let listProducts = [
         name: 'Xell HEK_FS',
         dataname: 'p_04',
         price: 100,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_FS Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['CGT'],
             cellline: ['HEK'],
-            manufacturer: 'Merck',
-            application: 'CGT',
             mediatype: ['Liquid']
         }
     },
@@ -64,12 +64,12 @@ let listProducts = [
         name: 'Xell HEK_GM',
         dataname: 'p_05',
         price: 100,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_GM Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['Vaccine'],
             cellline: ['VERO'],
-            manufacturer: 'Merck',
-            application: 'Vaccine',
             mediatype: ['Liquid']
         }
     },
@@ -78,13 +78,13 @@ let listProducts = [
         name: 'Xell HEK_TF_for_SILAC',
         dataname: 'p_06',
         price: 200,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_TF_for_SILAC Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            manufacturer: 'Sigma',
-            application: 'mAb',
-            mediatype: ['Liquid', 'Powder']
+            mediatype: ['Liquid']
         }
     },
     {
@@ -92,13 +92,13 @@ let listProducts = [
         name: 'Xell HEK_ViP_NB',
         dataname: 'p_07',
         price: 200,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_ViP_NB Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            manufacturer: 'Sigma',
-            application: 'mAb',
-            mediatype: ['Liquid', 'Powder']
+            mediatype: ['Liquid']
         }
     },
     {
@@ -106,13 +106,13 @@ let listProducts = [
         name: 'Xell HYB_FS',
         dataname: 'p_08',
         price: 200,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell HYB_FS Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            manufacturer: 'Sigma',
-            application: 'mAb',
-            mediatype: ['Liquid', 'Powder']
+            mediatype: ['Liquid']
         }
     },
     {
@@ -120,15 +120,116 @@ let listProducts = [
         name: 'Xell MDXK',
         dataname: 'p_09',
         price: 200,
-        brand: 'Xell',
+        brand: 'Xell(Sartorius)',
         image: 'image/Xell MDXK Liquid.jpg',
         nature: {
+            manufacturer: 'XellSartorius',
+            application: ['Vaccine'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            manufacturer: 'Sartorius',
-            application: 'Vaccine',
-            mediatype: ['Liquid', 'Powder']
+            mediatype: ['Liquid']
         }
     },
+    {
+        id: 10,
+        name: '4Cell-SmartCHO-Stock+Adaption',
+        dataname: 'p_10',
+        price: 200,
+        brand: 'Sartorius',
+        image: 'image/Sartorius_4Cell-SmartCHO-Stock+Adaption-Medium-Liquid-1L-B-0002845-White.jpg',
+        nature: {
+            manufacturer: 'Sartorius',
+            application: ['mAb'],
+            cellline: ['CHO'],
+            mediatype: ['Liquid']
+        }
+    },
+    {
+        id: 11,
+        name: '4Cell-SmartCHOpe-Production',
+        dataname: 'p_11',
+        price: 200,
+        brand: 'Sartorius',
+        image: 'image/Sartorius 4Cell-SmartCHOpe-Production-Medium-Powder-50L-B-0002857-White.jpg',
+        nature: {
+            manufacturer: 'Sartorius',
+            application: ['mAb'],
+            cellline: ['CHO'],
+            mediatype: ['Powder']
+        }
+    },
+    {
+        id: 12,
+        name: '4Cell-SmartCHO-Production',
+        dataname: 'p_12',
+        price: 200,
+        brand: 'Sartorius',
+        image: 'image/Sartorius_4Cell-SmartCHO-Production-Medium-Liquid-1L-B-0002841-White.jpg',
+        nature: {
+            manufacturer: 'Sartorius',
+            application: ['mAb'],
+            cellline: ['CHO'],
+            mediatype: ['Liquid']
+        }
+    },
+    {
+        id: 13,
+        name: 'Xell TCX6D',
+        dataname: 'p_13',
+        price: 200,
+        brand: '(Xell)Sartorius',
+        image: 'image/Xell TCX6D.jpg',
+        nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
+            cellline: ['CHO', 'DG44'],
+            mediatype: ['Liquid']
+        }
+    },
+    {
+        id: 14,
+        name: 'TC-42 with Growth Hormone',
+        dataname: 'p_14',
+        price: 200,
+        brand: '(Xell)Sartorius',
+        image: 'image/Xell TC-42_with_Growth_Hormone.jpg',
+        nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
+            cellline: ['CHO', 'DG44'],
+            mediatype: ['Liquid']
+        }
+    },
+    {
+        id: 15,
+        name: 'TC-42 with Insuline',
+        dataname: 'p_15',
+        price: 200,
+        brand: '(Xell)Sartorius',
+        image: 'image/Xell TC-42_with_Insuline.jpg',
+        nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
+            cellline: ['CHO', 'DG44'],
+            mediatype: ['Liquid']
+        }
+    },
+    {
+        id: 16,
+        name: 'TC-42 w/o Growth Hormone',
+        dataname: 'p_16',
+        price: 200,
+        brand: '(Xell)Sartorius',
+        image: 'image/Xell TC-42_without_Growth_Hormone.jpg',
+        nature: {
+            manufacturer: 'XellSartorius',
+            application: ['mAb'],
+            cellline: ['CHO', 'DG44'],
+            mediatype: ['Liquid']
+        }
+    },
+    
+    
+    
     
             
 ];
@@ -156,6 +257,14 @@ function showProduct(productFilter){                    // showProduct 함수 �
         let newImage = new Image();
         newImage.src = item.image;                      // <img src="item.image">
         newItem.appendChild(newImage);                  // <div class="item"> 이 노드에 child 노드로 맨 마지막 줄에 넣어라 (제일 아래에 넣지만 아래 스크립트 순서에 의해 이 노드가 자식 노드 중 가장 위로 올라온다)
+
+        // silverhyo
+        // let previewBox = document.querySelectorAll('.preview');
+        // let previewImage = new Image();
+        // previewImage.src = item.image;
+        // document.querySelectorAll('.preview').appendChild(previewImage);
+
+
         
         // create name product
         let newTitle = document.createElement('div');
@@ -191,22 +300,22 @@ filter.addEventListener('submit', function(event){
     let valueFilter = event.target.elements;
     productFilter = listProducts.filter(item => {
         
+        // check manufacturer // item앞에 !가 없잖아 그래서 아래 것들과는 다른데 딱 한가지 중복 없어야 하는 경우 이걸 쓴 것 같다.
+        if(valueFilter.manufacturer.value != ''){
+            if(item.nature.manufacturer != valueFilter.manufacturer.value){
+                return false;
+            }
+        }
+
         // check application
         if(valueFilter.application.value != ''){
-            if(item.nature.application != valueFilter.application.value){ // item앞에 !가 없잖아 그래서 아래 것들과는 다른데 딱 한가지 중복 없어야 하는 경우 이걸 쓴 것 같다.
+            if(!item.nature.application.includes(valueFilter.application.value)){ 
                 return false;
             }
         }
         // check cell line
         if(valueFilter.cellline.value != ''){
             if(!item.nature.cellline.includes(valueFilter.cellline.value)){
-                return false;
-            }
-        }
-
-        // check manufacturer
-        if(valueFilter.manufacturer.value != ''){
-            if(!item.nature.manufacturer.includes(valueFilter.manufacturer.value)){
                 return false;
             }
         }
