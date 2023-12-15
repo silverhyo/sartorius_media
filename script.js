@@ -401,7 +401,7 @@ function showProduct(productFilter){
 
 // ==============================================================================FILTER
 filter.addEventListener('submit', function(event){
-    event.stopImmediatePropagation();
+    event.preventDefault();
     let valueFilter = event.target.elements;
     productFilter = listProducts.filter(item => {
         
