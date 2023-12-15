@@ -1,3 +1,21 @@
+// =====================================================================specialist 정보창
+let specialistContainer = document.getElementById('specialistcontainer');
+
+function openSpecialistWindow() {
+    specialistContainer.style.display = 'flex';
+};
+let openSpecialistWindowButton = document.getElementById('openspecialistwindow');
+openSpecialistWindowButton.addEventListener('click', openSpecialistWindow);
+
+
+function closeSpecialistWindow() {
+    specialistContainer.style.display = 'none';
+};
+let closeButton1 = document.getElementById('closebutton01');
+closeButton1.addEventListener("click", closeSpecialistWindow);
+// ========================================================================================
+
+
 let list = document.getElementById('list'); 
 let filter = document.querySelector('.filter');
 let count = document.querySelector('#count');
@@ -14,7 +32,11 @@ let listProducts = [
             application: ['CGT'],
             cellline: ['CHO', 'HEK'],
             mediatype: ['Liquid'],  // HTML <option value="">에서 따옴표 사이와 여기 배열안의 단어가 똑같아야 함!!
-            description01 : '정말좋은배지입니다.'
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: 'cell을 잘 자라게 합니다.',
+            description04: '오호호',
+            description05: '와우',
         }
     },
     {
@@ -28,7 +50,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
             cellline: ['HEK', 'VERO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -42,7 +69,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
             cellline: ['CHO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -56,7 +88,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['CGT'],
             cellline: ['HEK'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -70,7 +107,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
             cellline: ['VERO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -84,7 +126,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -98,7 +145,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -112,7 +164,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -126,7 +183,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
             cellline: ['CHO', 'HEK', 'VERO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -140,7 +202,12 @@ let listProducts = [
             manufacturer: 'Sartorius',
             application: ['mAb'],
             cellline: ['CHO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -154,7 +221,12 @@ let listProducts = [
             manufacturer: 'Sartorius',
             application: ['mAb'],
             cellline: ['CHO'],
-            mediatype: ['Powder']
+            mediatype: ['Powder'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -168,7 +240,12 @@ let listProducts = [
             manufacturer: 'Sartorius',
             application: ['mAb'],
             cellline: ['CHO'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -182,7 +259,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'DG44'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -196,7 +278,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'DG44'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -210,7 +297,12 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'DG44'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
     },
     {
@@ -224,26 +316,58 @@ let listProducts = [
             manufacturer: 'XellSartorius',
             application: ['mAb'],
             cellline: ['CHO', 'DG44'],
-            mediatype: ['Liquid']
+            mediatype: ['Liquid'],
+            description01: '정말좋은배지입니다.',
+            description02: '가성비가 좋은 배지 입니다',
+            description03: '',
+            description04: '',
+            description05: '',
         }
-    },
-    
-    
-    
-    
-            
+    },            
 ];
 
+let specialist = [
+    {
+        id: 1,
+        datname: 's_01',
+        name: '김서윤 부장',
+        ename: 'April.Kim',
+        email: 'April.Kim@sartorius.co.kr',
+        mobile: '010-1234-5678'    
+    },
+    {
+        id: 2,
+        datname: 's_02',
+        name: '장두재 과장',
+        ename: 'Doojae.Jang',
+        email: 'Doojae.jang@sartorius.co.kr',
+        mobile: '010-1234-5678'
+    },
+    {
+        id: 3,
+        datname: 's_03',
+        name: '손대우 과장',
+        ename: 'Robert.Son',
+        email: 'Robert.Son@sartorius.co.kr',
+        mobile: '010-1234-5678'
+    },
+    {
+        id: 4,
+        datname: 's_04',
+        name: '이윤서 대리',
+        ename: 'Samantha.Lee',
+        email: 'Samantha.Lee@sartorius.co.kr',
+        mobile: '010-1234-5678'
+    },
+];
 
-
-
-
-let productFilter = listProducts;                       // productFilter 변수 생성 > listProducts (정보 담긴 array) 변수를 대입 
-showProduct(productFilter);                             // showProduct함수에 productFilter 변수를 파라매터로 입력
-function showProduct(productFilter){                    // showProduct 함수 정의
-    count.innerText = productFilter.length;             // HTML에서 id=count인 노드를 count 변수로 생성했고 innerText인 숫자 5를 불러옴 이것은 array의 갯수
-    list.innerHTML = '';                                // HTML에서 id=list인 노드를 list 변수로 생성했고 innerHTML을 통해 HTML에서 id=list 이하 자식 노드를 가져온다?
-    productFilter.forEach(item => {                     // 역서 의미하는 item은 무엇? array에 있는 각각의 항목을 의미? forEach는 각 항목에 대해 똑같이 반복하는 반복문 중의 하나.
+// =======================================================================ITEM LIST
+let productFilter = listProducts;
+showProduct(productFilter);
+function showProduct(productFilter){
+    count.innerText = productFilter.length;
+    list.innerHTML = '';
+    productFilter.forEach(item => {
         
         let newItem = document.createElement('div');    //  
         newItem.classList.add('item');
@@ -252,51 +376,32 @@ function showProduct(productFilter){                    // showProduct 함수 �
         let newData = newItem;
         newData.dataset.name = item.dataname;
 
-        
         // create image
         let newImage = new Image();
-        newImage.src = item.image;                      // <img src="item.image">
-        newItem.appendChild(newImage);                  // <div class="item"> 이 노드에 child 노드로 맨 마지막 줄에 넣어라 (제일 아래에 넣지만 아래 스크립트 순서에 의해 이 노드가 자식 노드 중 가장 위로 올라온다)
-
-        // silverhyo
-        // let previewBox = document.querySelectorAll('.preview');
-        // let previewImage = new Image();
-        // previewImage.src = item.image;
-        // document.querySelectorAll('.preview').appendChild(previewImage);
-
-
+        newImage.src = item.image;
+        newItem.appendChild(newImage);
         
         // create name product
         let newTitle = document.createElement('div');
-        newTitle.classList.add('title');                // <div class="title"></div>
-        newTitle.innerText = item.name;                 // <div class="title">item.name</div>
-        newItem.appendChild(newTitle);                  // <div class="item"> 의 자식요소로 넣어라
+        newTitle.classList.add('title');
+        newTitle.innerText = item.name;
+        newItem.appendChild(newTitle);
 
                         
         //create brand
-        let newBrand = document.createElement('div');   // <div></div>
-        newBrand.classList.add('brand');                // <div class="price"></div>
-        newBrand.innerText = item.brand;                // <div class="price">item.price</div>
-        newItem.appendChild(newBrand);                 // appendChild()메소드 : 새로운 노드를 해당 노드의 child node list의 맨 마지막에 추가
+        let newBrand = document.createElement('div');
+        newBrand.classList.add('brand');
+        newBrand.innerText = item.brand;
+        newItem.appendChild(newBrand);
 
-        
-        
-
-
-
-
-        list.appendChild(newItem);                    // <div class="item"></div>요소를 <div class="list"></div>사이에 넣어라!
-   
-
-        
-
-
+        list.appendChild(newItem);
     });
 }
+// ======================================================================================
 
-
+// ==============================================================================FILTER
 filter.addEventListener('submit', function(event){
-    event.preventDefault();                             // preventDefault : 페이지 새로고침이 없어서 filter링 한 것을 볼 수 있는 것. 이것이 없다면 새로 고침이 된다.
+    event.stopImmediatePropagation();
     let valueFilter = event.target.elements;
     productFilter = listProducts.filter(item => {
         
@@ -348,95 +453,104 @@ filter.addEventListener('submit', function(event){
         return true;
     })
     showProduct(productFilter);
-})
+});
+// =====================================================================================
+
+// =====================================================================CREATE ELEMENT
+makePopupWindow();
+function makePopupWindow() {
+
+    let previewCon = document.getElementById('previewcon');
+    previewCon.innerHTML = '';
+    productFilter.forEach(item => {
+
+        let newData00 = document.createElement('div');
+        newData00.classList.add('previewbox');
+        let newData01 = newData00;
+        newData01.dataset.target = item.dataname;
+        previewCon.appendChild(newData01);
+
+        let newData02 = document.createElement('div');
+        newData02.classList.add('preview')
+        newData01.appendChild(newData02);
+
+        let newImage = new Image();
+        newImage.src = item.image;
+        newData02.appendChild(newImage);
+
+        let newCloseButton = document.createElement('div');
+        newCloseButton.classList.add('closebutton');
+        newCloseButton.innerHTML = 'close';
+        newData02.appendChild(newCloseButton);
+
+        let newData03 = document.createElement('br');
+        newData01.appendChild(newData03);
+
+        let newData04 = document.createElement('h3');
+        newData04.classList.add('medianame');
+        newData04.innerHTML = item.name;
+        newData01.appendChild(newData04);
+
+        let newData05 = document.createElement('div');
+        newData05.classList.add('description');
+        newData01.appendChild(newData05);
+
+        let newData06 = document.createElement('ul');
+        newData05.appendChild(newData06);
+
+        let newData07 = document.createElement('li')
+        newData07.innerHTML = item.nature.description01;
+        newData06.appendChild(newData07);
+        let newData08 = document.createElement('li')
+        newData08.innerHTML = item.nature.description02;
+        newData06.appendChild(newData08);
+        let newData09 = document.createElement('li')
+        newData09.innerHTML = item.nature.description03;
+        newData06.appendChild(newData09);
+        let newData10 = document.createElement('li')
+        newData10.innerHTML = item.nature.description04;
+        newData06.appendChild(newData10);
+        let newData11 = document.createElement('li')
+        newData11.innerHTML = item.nature.description05;
+        newData06.appendChild(newData11);
 
 
-let popupContainer = document.querySelector('.preview_container');
-let previewBox = document.querySelectorAll('.previewbox');  // All 선택하지 않으면 체일 처음 나오는 previewbox 하나만 선택됨
 
+    });
+};
+// ====================================================================================
 
+// ========================================================================POPUP WINDOW
+function makePopupWindowActive() {
+    let previewContainer = document.getElementById('previewcon');
+    let listItem = document.querySelectorAll('#list .item');
+    let previewBox = document.querySelectorAll('.previewbox');
+
+    listItem.forEach(item => {
+        item.onclick=() => {
+            previewContainer.style.display = 'flex';
+            let name = item.getAttribute('data-name');
+            previewBox.forEach(previewBox => {
+                let target = previewBox.getAttribute('data-target');
+                if(name == target) {
+                    previewBox.classList.add('active');
+                }
+            })
+        }
+    })
+};
+makePopupWindowActive();
+
+let previewContainer = document.getElementById('previewcon');
 let listItem = document.querySelectorAll('#list .item');
-listItem.forEach(item => {
-    item.onclick=() => {
-        popupContainer.style.display = 'flex'
-        let name = item.getAttribute('data-name');
-        previewBox.forEach(previewBox => {
-            let target = previewBox.getAttribute('data-target');
-            if(name == target) {
-                previewBox.classList.add('active');
-            }
-
-        });
-    };
-
-});
-
+let previewBox = document.querySelectorAll('.previewbox');
 let closeButton = document.querySelectorAll('.closebutton');
-closeButton.forEach(closebutton => {
-    closebutton.onclick = () => {
-        popupContainer.style.display = 'none'
-
+closeButton.forEach(item => {
+    item.onclick = () => {
+        previewContainer.style.display = 'none';
         let previewBoxActive = document.querySelector('.previewbox.active');
-        previewBox.forEach(previewbox => {
-            document.querySelector('.previewbox.active').classList.remove("active");
-        });
-        
-    };
-
-});
-
-
-        // silverhyo
-        // let newPart = document.createElement('div');
-        // newPart.classList.add('popupimagebox');
-
-        // silverhyo
-        // let newTag01 = document.createElement('div');
-        // newTag01.classList.add('preview');
-                
-
-        // let newImage01 = new Image();
-        // newImage01.src = item.image;
-        // newTag01.appendChild(newImage01);
-        
-        
-        
-        // let newTag02 = document.createElement('h3')
-
-        // h3name.innerText = item.name;
-        
-        
-        
-        
-        
-        
-
-        // silverhyo
-        // let newImage01 = new Image();
-        // newImage01.src = item.image;
-
-             // silverhyo
-        // previewBox.appendChild(newTag01);
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
+        previewBoxActive.classList.remove("active");
+        };
+    }
+);
+// =====================================================================================

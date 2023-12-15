@@ -5,98 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
 <!-- Stylesheet 링크 -->
     <link rel="stylesheet" href="style.css">
 
-  
 </head>
-
 <body>
     <div class="container">
          <!-- ======================================Sartorius Logo 입니다. -->
-         <div class="sartoriusbox">
-
+        <div class="sartoriusbox">
             <div class="sartorius_logo">
                 <a href="index.html">
                     <img src="image/sartorius-logo-black.png" width="100%" class="imagelogo">
                 </a>
+            </div> 
+            <div id='openspecialistwindow'>
+                SPECIALIST
             </div>
-            
-            <div class="specialistbox">
-
-                <div class="specialist">
-                    <input type="checkbox" id="popup">
-                    <label for="popup">SPECIALIST</label>
-
-                    <div>
-                        <div>
-                            <label for="popup"></label>
-                            <div class="modalcontent">
-                                
-                                <div class="intro">
-                                    Application Specialists
-                                </div>
-
-                                <div class="incharge">
-                                    <img src="image02/p_01.jpg">
-                                    <div>
-                                        <ul>
-                                            <li><strong>April.Kim</strong></li><br>
-                                            <li>april.kim@sartorius.co.kr</li>
-                                            <li>010-0000-0000</li>
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="incharge">
-                                    <img src="image02/p_02.jpg">
-                                    <div>
-                                        <ul>
-                                            <li><strong>Doojae.Jang</strong></li><br>
-                                            <li>doojae.jang@sartorius.co.kr</li>
-                                            <li>010-0000-0000</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                                
-                                <div class="incharge">
-                                    <img src="image02/p_03.jpg">
-                                    <div>
-                                        <ul>
-                                            <li><strong>April.Kim</strong></li><br>
-                                            <li>april.kim@sartorius.co.kr</li>
-                                            <li>010-0000-0000</li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <label for="popup"></label>
-                    </div>
-                </div>
-                
-        
-            </div>
-            
         </div>
-
-         <!-- ==============================================Modal Window -->
-        
- 
-
-        <!-- =======================================================POPUP -->
-        
-       
-          
-
-                
         <!-- =====================================================Filter -->
         <form class="filter">
-            
             <div class="item">
                 <label for="">Manufacturer</label>
                 <select name="manufacturer">
@@ -107,7 +34,6 @@
                     <option value="Sigma">Sigma</option>
                 </select>
             </div>
-            
             <div class="item">
                 <label for="">Aplication</label>
                 <select name="application">
@@ -117,7 +43,6 @@
                     <option value="CGT">CGT</option>
                 </select>
             </div>
-
             <div class="item">
                 <label for="">Cell Line</label>
                 <select name="cellline">
@@ -128,7 +53,6 @@
                     <option value="VERO">VERO</option>
                 </select>
             </div>
-
             <div class="item">
                 <label for="">Media Type</label>
                 <select name="mediatype">
@@ -137,34 +61,27 @@
                     <option value="Powder">Powder</option>
                 </select>
             </div>
-
             <div class="item">
                 <label for="">Min Price</label>
                 <input type="number" name="minPrice">
             </div>
-
             <div class="item">
                 <label for="">Max Price</label>
                 <input type="number" name="maxPrice">
             </div>
-
             <div class="item">
                 <label for="">Name</label>
                 <input type="text" name="name">
             </div>
-
             <div class="item submit">
                 <button>Search</button>
             </div>
-
         </form>
-
-
+     
         <!-- =============================================CoundResults -->
         <div class="countResults">
-            - FOUND <b id="count"></b> RESULTS -
+            FOUND <b id="count"></b> RESULTS
         </div>
-
 
         <!-- ======================================================list -->
         <div id="list">
@@ -174,271 +91,52 @@
                 <div class="brand"></div>
             </div> -->
         </div>
-
        
         <!-- ==================================================Footer -->
-        <div class="footer">
+        <div id="footer" class="footer">
             <div class="sartoriusend">
             <img src="image/sartorius-logo-white.png">
             </div>
         </div>
-
     </div>
 
     <!-- ===================================================POPUP_WINDOW -->
     
-    <div class="preview_container">
-        
-        <div class="previewbox" data-target="p_01">
+    <div id="previewcon" class="preview_container">
+        <!-- <div class="previewbox active" data-target='p_01'>
             <div class="preview">
-                <img src="image/Xell CAP_CDM_Feed Liquid.jpg" alt="">
+                <img src="image/Xell CAP_CDM_Feed Liquid.jpg">
                 <div class="closebutton">close</div>
             </div>
-            <br>  
-            <h3 id="h3name">Xell CAP_CDM_Feed</h3>
-            <div class="description">
-                <ul>
-                    <li>좋은 배지 입니다</li>
-                    <li>정말좋은배지입니다.</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_02">
-            <div class="preview">
-                <img src="image/Xell CHO_TF Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell CHO_TF</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_03">
-            <div class="preview">
-                <img src="image/Xell CHOlean Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell CHOlean</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_04">
-            <div class="preview">
-                <img src="image/Xell HEK_FS Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_FS</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_05">
-            <div class="preview">
-                <img src="image/Xell HEK_GM Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_GM</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_06">
-            <div class="preview">
-                <img src="image/Xell HEK_TF_for_SILAC Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_TF_for_SILAC</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_07">
-            <div class="preview">
-                <img src="image/Xell HEK_ViP_NB Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HEK_ViP_NB</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_08">
-            <div class="preview">
-                <img src="image/Xell HYB_FS Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell HYB_FS</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_09">
-            <div class="preview">
-                <img src="image/Xell MDXK Liquid.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell MDXK</h3>
-            <div class="description">
-                <ul>
-                    <li>나름 좋습니다</li>
-                    <li>가성비 좋은 배지 입니다</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_10">
-            <div class="preview">
-                <img src="image/Sartorius_4Cell-SmartCHO-Stock+Adaption-Medium-Liquid-1L-B-0002845-White.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">4Cell-SmartCHO-Stock+Adaption</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_11">
-            <div class="preview">
-                <img src="image/Sartorius 4Cell-SmartCHOpe-Production-Medium-Powder-50L-B-0002857-White.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">4Cell-SmartCHOpe-Production</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_12">
-            <div class="preview">
-                <img src="image/Sartorius_4Cell-SmartCHO-Production-Medium-Liquid-1L-B-0002841-White.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">4Cell-SmartCHO-Production</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_13">
-            <div class="preview">
-                <img src="image/Xell TCX6D.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">Xell TCX6D</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_14">
-            <div class="preview">
-                <img src="image/Xell TC-42_with_Growth_Hormone.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">TC-42_with_Growth_Hormone</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_15">
-            <div class="preview">
-                <img src="image/Xell TC-42_with_Insuline.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">TC-42_with_Insuline</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
-        <div class="previewbox" data-target="p_16">
-            <div class="preview">
-                <img src="image/Xell TC-42_without_Growth_Hormone.jpg" alt="">
-                <div class="closebutton">close</div>
-            </div>
-            <br>  
-            <h3 id="h3name">TC-42_without_Growth_Hormone</h3>
-            <div class="description">
-                <ul>
-                    <li>Purpose : Media Screening</li>
-                    <li>나름 좋습니다</li>
-                    <li>Any CHO cell line에 적용 가능!</li>
-                </ul>
-            </div>            
-        </div>
-
+            <br>
+            <h3>ABCDEFG</h3>
+            <div class="medianame"></div>
+            <div class="description"></div>
+        </div> -->
     </div>
 
-    
+    <!-- ==============================================Special List -->
+    <div id="specialistcontainer" class="fadeout">
+        <div class="specialistbox">
+            <div class="buttonbox01">
+                <div id="closebutton01">close</div>
+            </div>
+            <div class="specialist">
+                <div class="specialist01">
+                    1
+                </div>
+                <div class="specialist01">
+                    2
+                </div>
+                <div class="specialist01">
+                    3
+                </div>
+                <div class="specialist01">
+                    4
+                </div>
+            </div>     
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
