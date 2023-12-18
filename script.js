@@ -453,8 +453,13 @@ filter.addEventListener('submit', function(event){
         return true;
     })
     showProduct(productFilter);
+    makePopupWindowActive();
 });
 // =====================================================================================
+
+
+
+
 
 // =====================================================================CREATE ELEMENT
 makePopupWindow();
