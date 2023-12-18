@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 10px solid white;
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.container .welcome {
+    width: 70%;
+    margin: 200px auto 0;
+    
+}
+
+.container .welcome img {
+    width: 100%;
+    animation-duration: 5s;
+    animation-name: fadeinout;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    animation-duration: 7s;
+    line-height: ;
+    animation-name: fadeinout;
+}
+
+@keyframes fadeinout {
+    from {
+opacity: 0;
+
+    }
+
+    to {
+opacity: 1;
+
+    }
+}
+
+a {
+    text-decoration: none;
+}

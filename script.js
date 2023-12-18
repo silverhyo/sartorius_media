@@ -439,17 +439,18 @@ filter.addEventListener('submit', function(event){
             }
         }
         // check min price
-        if(valueFilter.minPrice.value != ''){
-            if(item.price < valueFilter.minPrice.value){
-                return false;
-            }
-        }
+        // if(valueFilter.minPrice.value != ''){
+        //     if(item.price < valueFilter.minPrice.value){
+        //         return false;
+        //     }
+        // }
         // check max price
-        if(valueFilter.maxPrice.value != ''){
-            if(item.price > valueFilter.maxPrice.value){
-                return false;
-            }
-        }
+        // if(valueFilter.maxPrice.value != ''){
+        //     if(item.price > valueFilter.maxPrice.value){
+        //         return false;
+        //     }
+        // }
+        
         return true;
     })
     showProduct(productFilter);
