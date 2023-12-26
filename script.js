@@ -29,6 +29,7 @@ let listProducts = [
         image: 'image/Xell CAP_CDM_Feed Liquid.jpg',
         datasheet:'./datasheet',
         download: '4Cell-XtraCHO-Media-System-Datasheet-en-B-2559949-Sartorius.pdf',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['CGT'],
@@ -49,6 +50,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell CHO_TF Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -69,6 +71,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell CHOlean Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -89,6 +92,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_FS Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['CGT'],
@@ -109,6 +113,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_GM Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -129,6 +134,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_TF_for_SILAC Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -149,6 +155,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_ViP_NB Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -169,6 +176,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HYB_FS Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -189,6 +197,7 @@ let listProducts = [
         brand: 'Xell(Sartorius)',
         image: 'image/Xell MDXK Liquid.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -209,6 +218,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/Sartorius_4Cell-SmartCHO-Stock+Adaption-Medium-Liquid-1L-B-0002845-White.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['mAb'],
@@ -229,6 +239,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/Sartorius 4Cell-SmartCHOpe-Production-Medium-Powder-50L-B-0002857-White.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['mAb'],
@@ -249,6 +260,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/Sartorius_4Cell-SmartCHO-Production-Medium-Liquid-1L-B-0002841-White.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['mAb'],
@@ -269,6 +281,7 @@ let listProducts = [
         brand: '(Xell)Sartorius',
         image: 'image/Xell TCX6D.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -289,6 +302,7 @@ let listProducts = [
         brand: '(Xell)Sartorius',
         image: 'image/Xell TC-42_with_Growth_Hormone.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -309,6 +323,7 @@ let listProducts = [
         brand: '(Xell)Sartorius',
         image: 'image/Xell TC-42_with_Insuline.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -329,6 +344,7 @@ let listProducts = [
         brand: '(Xell)Sartorius',
         image: 'image/Xell TC-42_without_Growth_Hormone.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -349,6 +365,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSCgo-Rapid-Osteogenic-Differentiation-Medium-100mL-Bottle-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -369,6 +386,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSC-Nutristem-ACF-Basal-Medium-500mL-Bottle-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -389,6 +407,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Basal-Medium-100mL-Bottle-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -409,6 +428,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Basal-Medium-500mL-Bottle-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -429,6 +449,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Basal-Medium-without-Phenol-Red-500mL-Bottle-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -449,6 +470,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSC-Nutristem-XF-PRF-Basal-Medium-500mL-Bottle-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -469,6 +491,7 @@ let listProducts = [
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Supplement-0.6mL-Vile-en-B.jpg',
         datasheet:'',
+        incharge: 'tel:01099263616',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -647,7 +670,6 @@ function makePopupWindow() {
         newData02.appendChild(newCloseButton);
 
         //Data-Sheet Download 버튼 만들기
-
         let newDatasheetbutton = document.createElement('div');
         newDatasheetbutton.classList.add('datasheetbutton');
         newData02.appendChild(newDatasheetbutton);
@@ -658,6 +680,17 @@ function makePopupWindow() {
         newData12.download = item.download;
         newData12.innerHTML = 'DataSheet';
         newDatasheetbutton.appendChild(newData12);
+
+        //incharge 버튼 만들기
+        let newIncharge = document.createElement('div');
+        newIncharge.classList.add('incharge');
+        newData02.appendChild(newIncharge);
+
+        // a Tag 만들기
+        let newData13 = document.createElement('a');
+        newData13.href = item.incharge;
+        newData13.innerHTML = '문의하기';
+        newIncharge.appendChild(newData13);
 
 
         let newData03 = document.createElement('br');
