@@ -27,6 +27,8 @@ let listProducts = [
         price: 100,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell CAP_CDM_Feed Liquid.jpg',
+        datasheet:'./datasheet',
+        download: '4Cell-XtraCHO-Media-System-Datasheet-en-B-2559949-Sartorius.pdf',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['CGT'],
@@ -46,6 +48,7 @@ let listProducts = [
         price: 100,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell CHO_TF Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -65,6 +68,7 @@ let listProducts = [
         price: 100,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell CHOlean Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -84,6 +88,7 @@ let listProducts = [
         price: 100,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_FS Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['CGT'],
@@ -103,6 +108,7 @@ let listProducts = [
         price: 100,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_GM Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -122,6 +128,7 @@ let listProducts = [
         price: 200,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_TF_for_SILAC Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -141,6 +148,7 @@ let listProducts = [
         price: 200,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HEK_ViP_NB Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -160,6 +168,7 @@ let listProducts = [
         price: 200,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell HYB_FS Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -179,6 +188,7 @@ let listProducts = [
         price: 200,
         brand: 'Xell(Sartorius)',
         image: 'image/Xell MDXK Liquid.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['Vaccine'],
@@ -198,6 +208,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/Sartorius_4Cell-SmartCHO-Stock+Adaption-Medium-Liquid-1L-B-0002845-White.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['mAb'],
@@ -217,6 +228,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/Sartorius 4Cell-SmartCHOpe-Production-Medium-Powder-50L-B-0002857-White.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['mAb'],
@@ -236,6 +248,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/Sartorius_4Cell-SmartCHO-Production-Medium-Liquid-1L-B-0002841-White.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['mAb'],
@@ -255,6 +268,7 @@ let listProducts = [
         price: 200,
         brand: '(Xell)Sartorius',
         image: 'image/Xell TCX6D.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -274,6 +288,7 @@ let listProducts = [
         price: 200,
         brand: '(Xell)Sartorius',
         image: 'image/Xell TC-42_with_Growth_Hormone.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -293,6 +308,7 @@ let listProducts = [
         price: 200,
         brand: '(Xell)Sartorius',
         image: 'image/Xell TC-42_with_Insuline.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -312,6 +328,7 @@ let listProducts = [
         price: 200,
         brand: '(Xell)Sartorius',
         image: 'image/Xell TC-42_without_Growth_Hormone.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'XellSartorius',
             application: ['mAb'],
@@ -331,6 +348,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSCgo-Rapid-Osteogenic-Differentiation-Medium-100mL-Bottle-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -350,6 +368,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSC-Nutristem-ACF-Basal-Medium-500mL-Bottle-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -369,6 +388,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Basal-Medium-100mL-Bottle-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -388,6 +408,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Basal-Medium-500mL-Bottle-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -407,6 +428,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Basal-Medium-without-Phenol-Red-500mL-Bottle-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -426,6 +448,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSC-Nutristem-XF-PRF-Basal-Medium-500mL-Bottle-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -445,6 +468,7 @@ let listProducts = [
         price: 200,
         brand: 'Sartorius',
         image: 'image/MSC-NutriStem-XF-Supplement-0.6mL-Vile-en-B.jpg',
+        datasheet:'',
         nature: {
             manufacturer: 'Sartorius',
             application: ['MSC'],
@@ -622,6 +646,20 @@ function makePopupWindow() {
         newCloseButton.innerHTML = 'close';
         newData02.appendChild(newCloseButton);
 
+        //Data-Sheet Download 버튼 만들기
+
+        let newDatasheetbutton = document.createElement('div');
+        newDatasheetbutton.classList.add('datasheetbutton');
+        newData02.appendChild(newDatasheetbutton);
+
+        // a Tag 만들기
+        let newData12 = document.createElement('a');
+        newData12.href = item.datasheet;
+        newData12.download = item.download;
+        newData12.innerHTML = 'DataSheet';
+        newDatasheetbutton.appendChild(newData12);
+
+
         let newData03 = document.createElement('br');
         newData01.appendChild(newData03);
 
@@ -653,6 +691,7 @@ function makePopupWindow() {
         newData11.innerHTML = item.nature.description05;
         newData06.appendChild(newData11);
 
+      
 
 
     });

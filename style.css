@@ -21,6 +21,11 @@ body {
     animation-name: fadeinout;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* =====================================================Sartorius_Logo */
 
 .sartoriusbox {
@@ -120,7 +125,7 @@ body {
     height: 45px;
     background-color: #FFF100;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 18px;
     text-align: center;
     line-height: 45px;
     padding: 0;
@@ -190,7 +195,7 @@ body {
     /* Bottom을 0으로 할 경우 list 부분의 내용이 잘릴 수 있다. 이 떄 scroll을 써보면 어떨까? */
     /* bottom: 0; */ 
     width: 100%;
-    height: 200px;
+    height: 350px;
     margin-top: 70px;
     background-color: #404040;
 }
@@ -212,24 +217,26 @@ body {
 /* display: none / flex으로 해야 ? */
 .preview_container {
     position: fixed;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    min-height: 100vh;
-    width: 100%;
-    background-color: rgba(0,0,0,.7);
+    /* min-height: 100vh; */
+    background-color: rgba(0,0,0,.6);
     display: none;
     align-items: center;
     justify-content: center;
 }
 
 .preview_container .previewbox {
-    width: 375px;
-    height: 650px;
+    width: 350px;
+    height: 700px;
     display: none;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
     background-color: white;
-    /* position: relative; */
+    position: relative;
+    border-radius: 0 0 10px 10px;;
     animation-duration: 2s;
     animation-name: fadeinout01;
 }
@@ -247,7 +254,6 @@ body {
 
 .preview_container .previewbox.active {
     display: inline-block;
-    
 }
 
 .previewbox .preview {
@@ -260,17 +266,34 @@ body {
 .closebutton {
     position: absolute;
     width: 40px;
-    height: 40px;
-    border: 1px solid black;
+    height: 40px;    
     background-color: black;
     color: white;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     line-height: 40px;
     top: 0;
     right: 0;
-    border-radius: 0 0 0 50%;
+    border-radius: 0 0 0 30%;
     cursor: pointer;
+}
+
+.datasheetbutton {
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    background-color: black;
+    text-align: center;
+    line-height: 25px;
+    right: 0;
+    bottom: 0;
+    cursor:pointer;
+}
+
+.datasheetbutton a {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
 }
 
 .preview_container .previewbox .preview img {
@@ -283,6 +306,7 @@ body {
 .description {
     width: 100%;
     margin-top: 30px;
+    padding: 10px;
 
 }
 
@@ -299,7 +323,7 @@ h3 {
 }
 
 
-/* ======================================================== MODAL Window */
+/* ======================================================== SPECIAL LIST */
 
 #specialistcontainer,
 .specialistbox,
@@ -336,32 +360,38 @@ h3 {
 }
 
 .specialistbox {
-    width: 340px;
-    height: 650px;
+    width: 350px;
+    height: 700px;
     display: flex;
     flex-direction: column;
     margin: auto;
-    background-color: white;
-    
+    background-color: white; 
+    position: relative;
+}
 
- 
+.specialistchart {
+    position: absolute;
+    width: 85%;
+    height: 50px;
+    background-color: #FFF100;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .buttonbox01 {
-    position: relative;
-    width: 100%;
-    height: 100px;
-}
-
-#closebutton01 {
     position: absolute;
     top: 0;
     right: 0;
-    border-radius: 0 0 0 50%;
-    width: 50px;
+    width: 15%;
     height: 50px;
-    color: white;
     background-color: black;
+    border-radius: 0 0 0 0;
+}
+
+#closebutton01 {
+    color: white;
     text-align: center;
     line-height: 50px;
     cursor: pointer;
@@ -372,12 +402,46 @@ h3 {
     height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
+    margin-top: 80px;
     padding: 10px;
 }
 
-.specialist01 {
+/* ===========================SEPCIALIST= */
+
+.specialist01,
+.specialist02,
+.specialist03,
+.specialist04 {
     width: 100%;
     height: 100%;
-    padding: 5px;  
+    padding: 5px; 
+    /* background-image: url("specialist/프리지아_03.jpg"); */
+    background-size: 100%;
+    background-position: center;
+    font-size: 14px;
+    text-align: right;
+    
+    
 }
-
+.name {
+    margin-top: 70px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+}
+.email {
+    font-size: 12px;
+}
+.tel {
+    width: 150px;
+    height: 20px;
+    background-color: #FFF100;
+    color: black;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 20px;
+}
