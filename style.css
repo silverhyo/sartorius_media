@@ -187,24 +187,20 @@ a {
 /* ===============================================================footer */
 
 .footer {
-    position: relative;
+    margin-top: 100px;
 }
 
 .sartoriusend {
-    position: absolute;
     /* Bottom을 0으로 할 경우 list 부분의 내용이 잘릴 수 있다. 이 떄 scroll을 써보면 어떨까? */
     /* bottom: 0; */ 
     width: 100%;
-    height: 350px;
-    margin-top: 70px;
-    background-color: #404040;
+    bottom: 0px;
+    margin-top: 0px;
 }
 
 .footer .sartoriusend img {
-    position: absolute;
-    width: 130px;
-    right: 20px;
-    bottom: 20px;
+    width: 100%;
+    bottom: 0px;
 }
 
 /* ========================================================POPUP_Window */
@@ -229,7 +225,7 @@ a {
 }
 
 .preview_container .previewbox {
-    width: 350px;
+    width: 360px;
     height: 700px;
     display: none;
     padding: 0px;
@@ -280,7 +276,7 @@ a {
 
 .datasheetbutton {
     position: absolute;
-    width: 80px;
+    width: 120px;
     height: 25px;
     background-color: black;
     text-align: center;
@@ -298,13 +294,13 @@ a {
 
 .incharge {
     position: absolute;
-    width: 80px;
+    width: 120px;
     height: 25px;
     background-color: #FFF100;
     color: black;
     text-align: center;
     line-height: 25px;
-    right: 80px;
+    right: 120px;
     bottom: 0;
     cursor:pointer;
 }
@@ -314,6 +310,26 @@ a {
     font-weight: 600;
     font-size: 12px;
 }
+
+.mailto {
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    background-color: Yellow;
+    color: black;
+    text-align: center;
+    line-height: 25px;
+    right: 240px;
+    bottom: 0;
+    cursor:pointer;
+}
+
+.mailto a {
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+}
+
 
 .preview_container .previewbox .preview img {
     width: 100%;
